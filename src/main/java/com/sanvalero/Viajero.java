@@ -1,26 +1,26 @@
 package com.sanvalero;
 
 public class Viajero {
-    private String id;
     private String nombre;
     private int edad;
+    private String nacionalidad;
     private String ciudad;
     private float score;
 
-    public Viajero(String id, String nombre, int edad, String ciudad) {
-        this.id = id;
+    public Viajero(String nombre, int edad, String nacionalidad, String ciudad) {
+        this.nacionalidad = nacionalidad;
         this.nombre = nombre;
         this.edad = edad;
         this.ciudad = ciudad;
         score = 5.0f;
     }
 
-    public String getId() {
-        return id;
+    public String getNacionalidad() {
+        return nacionalidad;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
 
     public String getNombre() {

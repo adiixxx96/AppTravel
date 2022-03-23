@@ -1,28 +1,26 @@
 package com.sanvalero;
 
-import java.util.Date;
-
 public class Viaje {
-    private String id;
     private String destino;
-    private Date fechaViaje;
+    private String area;
+    private String fechaViaje;
     private int plazasDisponibles;
     private float precio;
 
-    public Viaje(String id, String destino, Date fechaViaje, int plazasDisponibles, float precio) {
-        this.id = id;
+    public Viaje(String destino, String area, String fechaViaje, int plazasDisponibles, float precio) {
+        this.area = area;
         this.destino = destino;
         this.fechaViaje = fechaViaje;
         this.plazasDisponibles = plazasDisponibles;
         this.precio = precio;
     }
 
-    public String getId() {
-        return id;
+    public String getArea() {
+        return area;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setArea(String area) {
+        this.area = area;
     }
 
     public String getDestino() {
@@ -33,11 +31,11 @@ public class Viaje {
         this.destino = destino;
     }
 
-    public Date getFechaViaje() {
+    public String getFechaViaje() {
         return fechaViaje;
     }
 
-    public void setFechaViaje(Date fechaViaje) {
+    public void setFechaViaje(String fechaViaje) {
         this.fechaViaje = fechaViaje;
     }
 
