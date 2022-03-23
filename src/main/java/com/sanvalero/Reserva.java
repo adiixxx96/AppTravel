@@ -1,28 +1,26 @@
 package com.sanvalero;
 
-import java.util.Date;
-
 public class Reserva {
-    private String id;
+    private String nombreReserva;
     private int viajesReservados;
     private float precioTotal;
     private float deposito;
-    private Date fechaReserva;
+    private String fechaReserva;
 
-    public Reserva(String id, int viajesReservados, float precioTotal, float deposito, Date fechaReserva) {
-        this.id = id;
+    public Reserva(String nombreReserva, int viajesReservados, float precioTotal, float deposito, String fechaReserva) {
+        this.nombreReserva = nombreReserva;
         this.viajesReservados = viajesReservados;
         this.precioTotal = precioTotal;
         this.deposito = deposito;
         this.fechaReserva = fechaReserva;
     }
 
-    public String getId() {
-        return id;
+    public String getNombreReserva() {
+        return nombreReserva;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setNombreReserva(String nombreReserva) {
+        this.nombreReserva = nombreReserva;
     }
 
     public int getViajesReservados() {
@@ -49,11 +47,11 @@ public class Reserva {
         this.deposito = deposito;
     }
 
-    public Date getFechaReserva() {
+    public String getFechaReserva() {
         return fechaReserva;
     }
 
-    public void setFechaReserva(Date fechaReserva) {
+    public void setFechaReserva(String fechaReserva) {
         this.fechaReserva = fechaReserva;
     }
 }
