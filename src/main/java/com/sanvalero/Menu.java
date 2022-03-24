@@ -85,6 +85,8 @@ public class Menu {
 
         Viaje viaje = new Viaje(destino.trim(), area.trim(), fecha.trim(), plazas, precio);
         listadoViajes.add(viaje);
+        System.out.println("Viaje registrado correctamente. Pulsa cualquier tecla para continuar");
+        String tecla = teclado.nextLine();
     }
 
     public void anadirViajero(){
@@ -97,6 +99,8 @@ public class Menu {
         String nacionalidad = teclado.nextLine();
         System.out.println("Ciudad:");
         String ciudad = teclado.nextLine();
+        System.out.println("Viajero registrado correctamente. Pulsa cualquier tecla para continuar");
+        String tecla = teclado.nextLine();
 
         Viajero viajero = new Viajero(nombre.trim(), edad, nacionalidad.trim(), ciudad.trim());
         listadoViajeros.add(viajero);
@@ -114,21 +118,59 @@ public class Menu {
         float deposito = teclado.nextFloat();
         System.out.println("Fecha de la reserva:");
         String fecha = teclado.nextLine();
+        System.out.println("Reserva registrada correctamente. Pulsa cualquier tecla para continuar");
+        String tecla = teclado.nextLine();
 
         Reserva reserva = new Reserva(nombre.trim(), viajes, precio, deposito, fecha);
         listadoReservas.add(reserva);
     }
 
     public void consultarViajes(){
-
+        int numViaje = 1;
+        for (Viaje viaje : listadoViajes) {
+            System.out.println("Viaje " +numViaje);
+            System.out.println("Destino: " +viaje.getDestino());
+            System.out.println("Area: " +viaje.getArea());
+            System.out.println("Fecha : " +viaje.getFechaViaje());
+            System.out.println("Plazas disponibles: " +viaje.getPlazasDisponibles());
+            System.out.println("Precio " +viaje.getPrecio());
+            System.out.println();
+            numViaje++;
+        }
+        System.out.println("Pulsa cualquier tecla para volver al menú");
+        String tecla = teclado.nextLine();
     }
 
     public void consultarViajero(){
-
+        int numViajero = 1;
+        for (Viajero viajero : listadoViajeros) {
+            System.out.println("Viaje " +numViajero);
+            System.out.println("Nombre: " +viajero.getNombre());
+            System.out.println("Edad: " +viajero.getEdad());
+            System.out.println("Nacionalidad: " +viajero.getNacionalidad());
+            System.out.println("Ciudad: " +viajero.getCiudad());
+            System.out.println("Puntuación: " +viajero.getScore());
+            System.out.println();
+            numViajero++;
+        }
+        System.out.println("Pulsa cualquier tecla para volver al menú");
+        String tecla = teclado.nextLine();
     }
 
     public void consultarReserva(){
-
+        int numReserva = 1;
+        for (Reserva reserva : listadoReservas) {
+            System.out.println("Viaje " +numReserva);
+            System.out.println("Nombre: " +reserva.getNombreReserva());
+            System.out.println("Nº viajes reservados: " +reserva.getViajesReservados());
+            System.out.println("Precio total: " +reserva.getPrecioTotal());
+            System.out.println("Depósito: " +reserva.getDeposito());
+            System.out.println("Fecha reserva: " +reserva.getFechaReserva());
+            System.out.println();
+            numReserva++;
+        }
+        System.out.println("Pulsa cualquier tecla para volver al menú");
+        String tecla = teclado.nextLine();
     }
 
     public void rellenarListados() {
