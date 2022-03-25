@@ -32,6 +32,12 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -49,6 +55,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>com.sanvalero.Menu</mainClass>
+                                    <mainClass>com.sanvalero.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
