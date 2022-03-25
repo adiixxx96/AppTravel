@@ -53,7 +53,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.sanvalero.Menu</mainClass>
+                                    <mainClass>com.sanvalero.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

@@ -3,14 +3,16 @@ package com.sanvalero;
 public class Viaje {
     private String destino;
     private String area;
-    private String fechaViaje;
+    private String FechaInicioViaje;
+    private String FechaFinViaje;
     private int plazasDisponibles;
     private float precio;
 
-    public Viaje(String destino, String area, String fechaViaje, int plazasDisponibles, float precio) {
+    public Viaje(String destino, String area, String fechaInicioViaje, String fechaFinViaje, int plazasDisponibles, float precio) {
         this.area = area;
         this.destino = destino;
-        this.fechaViaje = fechaViaje;
+        this.FechaInicioViaje = fechaInicioViaje;
+        this.FechaFinViaje = fechaFinViaje;
         this.plazasDisponibles = plazasDisponibles;
         this.precio = precio;
     }
@@ -31,12 +33,20 @@ public class Viaje {
         this.destino = destino;
     }
 
-    public String getFechaViaje() {
-        return fechaViaje;
+    public String getFechaInicioViaje() {
+        return FechaInicioViaje;
     }
 
-    public void setFechaViaje(String fechaViaje) {
-        this.fechaViaje = fechaViaje;
+    public void setFechaInicioViaje(String fechaInicioViaje) {
+        this.FechaInicioViaje = fechaInicioViaje;
+    }
+
+    public String getFechaFinViaje() {
+        return FechaFinViaje;
+    }
+
+    public void setFechaFinViaje(String fechaFinViaje) {
+        this.FechaInicioViaje = fechaFinViaje;
     }
 
     public int getPlazasDisponibles() {
@@ -53,5 +63,20 @@ public class Viaje {
 
     public void setPrecio(float precio) {
         this.precio = precio;
+    }
+
+    public void comprobarArea(String area) {
+        if (!area.equalsIgnoreCase("Asia")
+        && !area.equalsIgnoreCase("África")
+        && !area.equalsIgnoreCase("Europa")
+        && !area.equalsIgnoreCase("Oriente Medio")
+        && !area.equalsIgnoreCase("Oceanía")
+        && !area.equalsIgnoreCase("Norteamérica")
+        && !area.equalsIgnoreCase("Sudamérica")) {
+            
+        System.out.println("El área no existe. Vuelve al colegio");
+
+        }
+
     }
 }

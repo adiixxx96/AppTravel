@@ -22,7 +22,6 @@ public class Menu {
         String opcion;
         rellenarListados();
 
-
         //Bucle hasta que el usuario pulse Salir
         do {
         //Imprimir el menú por pantalla
@@ -76,14 +75,16 @@ public class Menu {
         String destino = teclado.nextLine();
         System.out.println("Área:");
         String area = teclado.nextLine();
-        System.out.println("Fecha del viaje (DD/MM/YYYY):");
-        String fecha = teclado.nextLine();
+        System.out.println("Fecha inicio del viaje (DD/MM/YYYY):");
+        String fechaInicio = teclado.nextLine();
+        System.out.println("Fecha fin del viaje (DD/MM/YYYY):");
+        String fechaFin = teclado.nextLine();
         System.out.println("Plazas disponibles:");
         int plazas = teclado.nextInt();
         System.out.println("Precio:");
         float precio = teclado.nextFloat();
 
-        Viaje viaje = new Viaje(destino.trim(), area.trim(), fecha.trim(), plazas, precio);
+        Viaje viaje = new Viaje(destino.trim(), area.trim(), fechaInicio.trim(), fechaFin.trim(), plazas, precio);
         listadoViajes.add(viaje);
         System.out.println("Viaje registrado correctamente. Pulsa cualquier tecla para continuar");
         String tecla = teclado.nextLine();
@@ -131,7 +132,8 @@ public class Menu {
             System.out.println("Viaje " +numViaje);
             System.out.println("Destino: " +viaje.getDestino());
             System.out.println("Area: " +viaje.getArea());
-            System.out.println("Fecha : " +viaje.getFechaViaje());
+            System.out.println("Fecha inicio : " +viaje.getFechaInicioViaje());
+            System.out.println("Fecha fin: " +viaje.getFechaFinViaje());
             System.out.println("Plazas disponibles: " +viaje.getPlazasDisponibles());
             System.out.println("Precio " +viaje.getPrecio());
             System.out.println();
@@ -174,8 +176,8 @@ public class Menu {
     }
 
     public void rellenarListados() {
-        listadoViajes.add(new Viaje("Tailandia", "Asia", "01/05/2022", 15, 1100));
-        listadoViajes.add(new Viaje("Nueva York", "Norteamérica", "15/05/2022", 15, 800));
+        listadoViajes.add(new Viaje("Tailandia", "Asia", "01/05/2022", "13/05/2022", 15, 1100));
+        listadoViajes.add(new Viaje("Nueva York", "Norteamérica", "15/05/2022", "21/05/2022", 15, 800));
         listadoViajeros.add(new Viajero("Ana García", 25, "Española", "Zaragoza"));
         listadoViajeros.add(new Viajero("Juan Castillo", 23, "Argentina", "Buenos Aires"));
         listadoReservas.add(new Reserva("Ada Piedrafita", 2, 1600, 200, "23/03/2022"));

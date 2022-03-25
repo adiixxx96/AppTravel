@@ -54,4 +54,12 @@ public class Viajero {
     public void setScore(float score) {
         this.score = score;
     }
+
+    public void comprobarEdad(int edad) {
+        if (edad == 18) {
+            System.out.println("¡Por poco! Ya puedes viajar sin acompañado de un adulto");
+        } else if (edad < 18) {
+            System.out.println("Para viajar con nosotros tendrás que ir acompañado de un adulto");
+        }
+    }
 }

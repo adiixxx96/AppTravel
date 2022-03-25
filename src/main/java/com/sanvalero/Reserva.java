@@ -54,4 +54,12 @@ public class Reserva {
     public void setFechaReserva(String fechaReserva) {
         this.fechaReserva = fechaReserva;
     }
+
+    public boolean reservasDuplicadas(Reserva reserva1, Reserva reserva2) {
+        if ((reserva1.getNombreReserva()).equals(reserva2.getNombreReserva())) {
+            return true;
+        } else return false;
+    }
 }
+
+
