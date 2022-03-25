@@ -55,11 +55,11 @@ public class Viajero {
         this.score = score;
     }
 
-    public void comprobarEdad(int edad) {
-        if (edad == 18) {
-            System.out.println("¡Por poco! Ya puedes viajar sin acompañado de un adulto");
-        } else if (edad < 18) {
-            System.out.println("Para viajar con nosotros tendrás que ir acompañado de un adulto");
-        }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Viajero viajero = (Viajero) o;
+        return edad == viajero.edad && nombre.equals(viajero.nombre) && nacionalidad.equals(viajero.nacionalidad) && ciudad.equals(viajero.ciudad);
     }
 }

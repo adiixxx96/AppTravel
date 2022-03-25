@@ -55,10 +55,12 @@ public class Reserva {
         this.fechaReserva = fechaReserva;
     }
 
-    public boolean reservasDuplicadas(Reserva reserva1, Reserva reserva2) {
-        if ((reserva1.getNombreReserva()).equals(reserva2.getNombreReserva())) {
-            return true;
-        } else return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Reserva reserva = (Reserva) o;
+        return viajesReservados == reserva.viajesReservados && Float.compare(reserva.precioTotal, precioTotal) == 0 && Float.compare(reserva.deposito, deposito) == 0 && nombreReserva.equals(reserva.nombreReserva) && fechaReserva.equals(reserva.fechaReserva);
     }
 }
 

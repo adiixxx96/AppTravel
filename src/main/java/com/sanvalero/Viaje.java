@@ -1,5 +1,7 @@
 package com.sanvalero;
 
+import java.util.Objects;
+
 public class Viaje {
     private String destino;
     private String area;
@@ -65,18 +67,12 @@ public class Viaje {
         this.precio = precio;
     }
 
-    public void comprobarArea(String area) {
-        if (!area.equalsIgnoreCase("Asia")
-        && !area.equalsIgnoreCase("África")
-        && !area.equalsIgnoreCase("Europa")
-        && !area.equalsIgnoreCase("Oriente Medio")
-        && !area.equalsIgnoreCase("Oceanía")
-        && !area.equalsIgnoreCase("Norteamérica")
-        && !area.equalsIgnoreCase("Sudamérica")) {
-            
-        System.out.println("El área no existe. Vuelve al colegio");
 
-        }
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Viaje viaje = (Viaje) o;
+        return plazasDisponibles == viaje.plazasDisponibles && Float.compare(viaje.precio, precio) == 0 && destino.equals(viaje.destino) && area.equals(viaje.area) && FechaInicioViaje.equals(viaje.FechaInicioViaje) && FechaFinViaje.equals(viaje.FechaFinViaje);
     }
 }
