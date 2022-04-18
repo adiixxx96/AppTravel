@@ -165,7 +165,7 @@ public class Menu {
         for (Reserva reserva : listadoReservas) {
             System.out.println("Viaje " +numReserva);
             System.out.println("Nombre: " +reserva.getNombreReserva());
-            System.out.println("Nº viajes reservados: " +reserva.getViajesReservados());
+            System.out.println("Nº viajes reservados: " +reserva.getNumReserva());
             System.out.println("Precio total: " +reserva.getPrecioTotal());
             System.out.println("Depósito: " +reserva.getDeposito());
             System.out.println("Fecha reserva: " +reserva.getFechaReserva());

@@ -1,7 +1,5 @@
 package com.sanvalero;
 
-import java.util.Objects;
-
 public class Viaje {
     private String destino;
     private String area;

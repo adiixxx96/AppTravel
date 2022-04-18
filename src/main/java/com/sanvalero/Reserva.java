@@ -2,14 +2,14 @@ package com.sanvalero;
 
 public class Reserva {
     private String nombreReserva;
-    private int viajesReservados;
+    private int numReserva;
     private float precioTotal;
     private float deposito;
     private String fechaReserva;
 
-    public Reserva(String nombreReserva, int viajesReservados, float precioTotal, float deposito, String fechaReserva) {
+    public Reserva(String nombreReserva, int numReserva, float precioTotal, float deposito, String fechaReserva) {
         this.nombreReserva = nombreReserva;
-        this.viajesReservados = viajesReservados;
+        this.numReserva = numReserva;
         this.precioTotal = precioTotal;
         this.deposito = deposito;
         this.fechaReserva = fechaReserva;
@@ -23,12 +23,12 @@ public class Reserva {
         this.nombreReserva = nombreReserva;
     }
 
-    public int getViajesReservados() {
-        return viajesReservados;
+    public int getNumReserva() {
+        return numReserva;
     }
 
-    public void setViajesReservados(int viajesReservados) {
-        this.viajesReservados = viajesReservados;
+    public void setNumReserva(int numReserva) {
+        this.numReserva = numReserva;
     }
 
     public float getPrecioTotal() {
@@ -60,7 +60,7 @@ public class Reserva {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Reserva reserva = (Reserva) o;
-        return viajesReservados == reserva.viajesReservados && Float.compare(reserva.precioTotal, precioTotal) == 0 && Float.compare(reserva.deposito, deposito) == 0 && nombreReserva.equals(reserva.nombreReserva) && fechaReserva.equals(reserva.fechaReserva);
+        return numReserva == reserva.numReserva && Float.compare(reserva.precioTotal, precioTotal) == 0 && Float.compare(reserva.deposito, deposito) == 0 && nombreReserva.equals(reserva.nombreReserva) && fechaReserva.equals(reserva.fechaReserva);
     }
 }
 
