@@ -19,8 +19,7 @@ Puntos obligatorios:
 
 Puntos adicionales:
 - Configura maven para poder lanzar un análisis de código del proyecto directamente con esta herramienta --> se puede ver en el archivo POM.xml del repositorio
-- Añade algunos test JUnit al proyecto y configura el Job de Jenkins para que se ejecuten cada vez que éste se lance: Test para comprobar que se puede crear cada uno de los objetos, invocando al constructor y comprobando luego los valores de sus atributos --> se puede ver en las clases de test del código del proyecto y en el vídeo adjunto de la configuración de jetkins.
+- Añade algunos test JUnit al proyecto y configura el Job de Jenkins para que se ejecuten cada vez que éste se lance: Test para comprobar que se puede crear cada uno de los objetos, invocando al constructor y comprobando luego los valores de sus atributos --> se puede ver en las clases de test del código del proyecto y en el vídeo adjunto de la configuración de jetkins. He comprobado solo un atributo por cada objeto, pero se podrían replicar los test para cada atributo.
 - Añade una release del proyecto al repositorio para que los usuarios puedan descargarse tu aplicación para usarla directamente --> se puede ver en este repositorio
 - Utiliza el gestor de issues para registrar como features cada una de las funcionalidades que realices del proyecto. Registra también, al menos, 3 bugs que hayas encontrado durante su desarrollo --> se puede ver en este repositorio
 - Diseña el diagrama de clases de tu proyecto --> adjunto el diagrama en la AA
-- Diseña una página web para tu proyecto utilizando github-pages
